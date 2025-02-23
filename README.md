@@ -43,9 +43,9 @@ imaige("a samurai cat in a burning village")
 | generator  | optional | image generator              | hd      |
 | preference | optional | genius generator preferences | classic |
 
-> image width and height(for standard images 1024x576, 1024x720, 512x512, 768x1024, 576x1024, for hd images 1216x832, 1152x896, 1024x1024, 896x1152, 832x1216)
-> image generator(either 'standard', 'hd', or 'genius')
-> 'genius' generator preferences(either 'classic', 'anime', 'photography', 'graphic', or 'cinematic')
+- image width and height(for standard images 1024x576, 1024x720, 512x512, 768x1024, 576x1024, for hd images 1216x832, 1152x896, 1024x1024, 896x1152, 832x1216)
+- image generator(either 'standard', 'hd', or 'genius')
+- 'genius' generator preferences(either 'classic', 'anime', 'photography', 'graphic', or 'cinematic')
 
 ## Reference
 
