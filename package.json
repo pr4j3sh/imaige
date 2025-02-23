@@ -1,0 +1,49 @@
+{
+  "name": "pr4j3sh/imaige",
+  "description": "generate images using ai",
+  "version": "1.0.0",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "exports": {
+    "require": "dist/index.cjs",
+    "import": "dist/index.mjs"
+  },
+  "bin": {
+    "imaige": "dist/index.cjs"
+  },
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "build": "node esbuild.config.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "ai",
+    "image",
+    "image-generator",
+    "npm",
+    "javascript",
+    "commonjs",
+    "frames"
+  ],
+  "author": "Prajesh Pratap Singh <prajesh.eleven118@gmail.com> (https://pr4j3sh.vercel.app/)",
+  "license": "MIT",
+  "homepage": "https://github.com/pr4j3sh/imaige#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pr4j3sh/imaige.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pr4j3sh/imaige/issues"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}
