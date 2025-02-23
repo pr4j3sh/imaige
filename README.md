@@ -27,6 +27,14 @@ imaige "a samurai cat in a burning village"
 
 ### Library
 
+- Install using `npm`
+
+```bash
+npm i @pr4j3sh/imaige
+```
+
+- Provides a single function `imaige` with 5 arguments, returns an url string
+
 ```js
 const { imaige } = require("@pr4j3sh/imaige");
 
@@ -43,13 +51,16 @@ imaige("a samurai cat in a burning village")
 | generator  | optional | image generator              | hd      |
 | preference | optional | genius generator preferences | classic |
 
-- image width and height(for standard images 1024x576, 1024x720, 512x512, 768x1024, 576x1024, for hd images 1216x832, 1152x896, 1024x1024, 896x1152, 832x1216)
-- image generator(either 'standard', 'hd', or 'genius')
-- 'genius' generator preferences(either 'classic', 'anime', 'photography', 'graphic', or 'cinematic')
+**Recommended Values**:
+
+- all arguments are of type string
+- image width and height(for standard images `1024x576`, `1024x720`, `512x512`, `768x1024`, `576x1024`, for hd images `1216x832`, `1152x896`, `1024x1024`, `896x1152`, `832x1216`)
+- image generator(either `standard`, `hd`, or `genius`)
+- `genius` generator preferences(either `classic`, `anime`, `photography`, `graphic`, or `cinematic`)
 
 ## Reference
 
-- [DeepAI](https://deepai.org/docs#ai-image-generator)
+- [DeepAI Documentation](https://deepai.org/docs#ai-image-generator)
 - [NodeJS Documentation](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
 - [NPM Documentation](https://docs.npmjs.com/)
 - [@pr4j3sh/frames](https://pr4j3sh.github.io/frames/)

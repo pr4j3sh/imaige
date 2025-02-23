@@ -1,4 +1,6 @@
 const { API_KEY } = require("./config");
+const fs = require("fs");
+const axios = require("axios");
 
 async function imaige(
   prompt,
@@ -10,22 +12,24 @@ async function imaige(
   try {
     if (!prompt) throw new Error("please provide a valid prompt");
 
-    const res = await fetch("https://api.deepai.org/api/text2img", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "api-key": API_KEY,
-      },
-      body: JSON.stringify({
+    const res = await axios.post(
+      "https://api.deepai.org/api/text2img",
+      {
         text: prompt,
         width,
         height,
         image_generator_version: generator,
         genius_preference: preference,
-      }),
-    });
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": API_KEY,
+        },
+      },
+    );
 
-    const data = await res.json();
+    const data = res.data;
     if (!data.output_url) {
       throw new Error("invalid response");
     }
@@ -35,4 +39,25 @@ async function imaige(
   }
 }
 
-module.exports = { imaige };
+async function downloadImage(url) {
+  try {
+    const timestamp = Date.now();
+    const filepath = `${timestamp}.jpg`;
+
+    const response = await axios({
+      url,
+      responseType: "stream",
+    });
+
+    response.data.pipe(fs.createWriteStream(filepath));
+
+    return new Promise((resolve, reject) => {
+      response.data.on("end", () => resolve(`image saved as ${filepath}`));
+      response.data.on("error", reject);
+    });
+  } catch (err) {
+    console.error(err.message);
+  }
+}
+
+module.exports = { imaige, downloadImage };

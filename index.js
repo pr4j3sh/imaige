@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const { argv } = require("node:process");
-const { imaige } = require("./src/utils");
+const { imaige, downloadImage } = require("./src/utils");
 
 const { program } = require("commander");
 
@@ -30,7 +30,11 @@ program
     const height = size[1];
 
     imaige(prompt, width, height, options.generator, options.preference)
-      .then((res) => console.log(res))
+      .then((res) => {
+        downloadImage(res)
+          .then((res) => console.log(res))
+          .catch((err) => console.error(err));
+      })
       .catch((err) => console.error(err));
   });
 
