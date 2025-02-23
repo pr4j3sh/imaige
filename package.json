@@ -1,5 +1,5 @@
 {
-  "name": "pr4j3sh/imaige",
+  "name": "@pr4j3sh/imaige",
   "description": "generate images using ai",
   "version": "1.0.0",
   "main": "dist/index.cjs",
