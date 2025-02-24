@@ -1,7 +1,7 @@
 {
   "name": "@pr4j3sh/imaige",
   "description": "generate images using ai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "exports": {
@@ -29,7 +29,7 @@
     "commonjs",
     "frames"
   ],
-  "author": "Prajesh Pratap Singh <prajesh.eleven118@gmail.com> (https://pr4j3sh.vercel.app/)",
+  "author": "Prajesh Pratap Singh <prajesh.eleven118@gmail.com> (https://pr4j3sh.github.io/pr4j3sh/)",
   "license": "MIT",
   "homepage": "https://github.com/pr4j3sh/imaige#readme",
   "repository": {
